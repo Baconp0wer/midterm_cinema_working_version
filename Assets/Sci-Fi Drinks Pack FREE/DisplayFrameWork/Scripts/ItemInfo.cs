@@ -58,6 +58,35 @@ public class ItemInfo : MonoBehaviour
         {
             DisplayInfo(col.gameObject, "Vermouth Dispender");
         }
+		if (col.gameObject.tag == "Brandy")
+		{
+			DisplayInfo(col.gameObject, "Brandy Dispender");
+		}
+
+		if (col.gameObject.tag == "Huangjiu Aged")
+		{
+			DisplayInfo(col.gameObject, "Huangjiu Aged Dispender");
+		}
+		if (col.gameObject.tag == "Huangjiu Yellow")
+		{
+			DisplayInfo(col.gameObject, "Huangjiu Yellow Dispender");
+		}
+		if (col.gameObject.tag == "Sake")
+		{
+			DisplayInfo(col.gameObject, "Sake Dispender");
+		}
+		if (col.gameObject.tag == "Sake Brown")
+		{
+			DisplayInfo(col.gameObject, "Sake Brown Dispender");
+		}
+		if (col.gameObject.tag == "Sake White")
+		{
+			DisplayInfo(col.gameObject, "Sake White Dispender");
+		}
+		if (col.gameObject.tag == "Soju")
+		{
+			DisplayInfo(col.gameObject, "Soju Dispender");
+		}
     }
 
     void DisplayInfo(GameObject go, string s)

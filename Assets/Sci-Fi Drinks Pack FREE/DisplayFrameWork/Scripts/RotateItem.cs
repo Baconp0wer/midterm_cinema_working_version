@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RotateItem : MonoBehaviour
 {
-    GameObject currentGO;
+    public GameObject currentGO;
 
     public float rotateSpeed = 0.5f;
 
@@ -13,7 +13,10 @@ public class RotateItem : MonoBehaviour
 
     void Update ()
     {
-        currentGO.transform.Rotate(0, 0, rotateSpeed * Time.smoothDeltaTime);
+		if (currentGO != null)
+		{
+			currentGO.transform.Rotate(0, 0, rotateSpeed * Time.smoothDeltaTime);
+		}
     }
 
     void OnTriggerEnter(Collider col)
@@ -43,5 +46,15 @@ public class RotateItem : MonoBehaviour
             currentGO = col.gameObject;
             //DisplayInfo(col.gameObject, "Martini Glass");
         }
+		/*if (col.gameObject.tag == "CafeLiqueur")
+		{
+			currentGO = col.gameObject;
+			//DisplayInfo(col.gameObject, "Martini Glass");
+		}
+		if (col.gameObject.tag == "TiaMaria")
+		{
+			currentGO = col.gameObject;
+			//DisplayInfo(col.gameObject, "Martini Glass");
+		}*/
     }
 }
